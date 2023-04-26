@@ -1,10 +1,15 @@
-// import { useState } from 'react'
 import './App.css'
+
+///COMPONENTS
+
+import Home from './Pages/Home'
 
 
 function App() {
   return (
-    <h1 className='text-3xl font-bold underline'>hello world</h1>
+  <>
+    <Home/>
+  </>
   )
 }
 
