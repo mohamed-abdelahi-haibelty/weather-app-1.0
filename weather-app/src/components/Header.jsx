@@ -2,7 +2,7 @@
 
 function Header() {
   return (
-    <div className="header px-[65px] pt-[34px]">
+    <div className="header px-[48px] pt-[34px]">
         <h1 className="city-name font-heading text-[37px] text-white font-normal tracking-tighter">Seongname-si</h1>
         <div className="temp text-center flex items-center gap-1 flex-col">
             <h1 className="current-temp text-[102px] text-white font-heading font-thin mt-[-32px] mb-[-24px]">21°</h1>
