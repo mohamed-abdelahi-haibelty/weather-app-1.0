@@ -6,3 +6,28 @@
 body{
     background: linear-gradient(to bottom, #121923, #2B3142);
 }
+
+.card{
+    @apply border border-white border-opacity-25 rounded-[15px]
+}
+
+/* width: 100px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 44px;
+    opacity: 0.15;
+    position: relative;
+} */
+
+/* content: var(--tw-content);
+    position: absolute;
+    background-color: #00B2FF;
+    width: 20px;
+    height: 4px;
+    left: calc(60% - 20px);
+    border-radius: 44px; */
+
+.progress-bar{
+    @apply w-[100px] h-[4px] bg-black rounded-[44px] relative before:absolute before:rounded-[44px] 
+    before:h-[4px] opacity-[0.15]
+}
