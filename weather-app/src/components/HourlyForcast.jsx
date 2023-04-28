@@ -21,21 +21,19 @@ function HourlyForcast() {
   }, [weatherData, weatherForecast])
 
   return (
-    <div className="hour-forcast mt-[44px] px-[17px] border border-white border-opacity-25 rounded-[15px] pt-[10px]">
+    <div className="hour-forcast mt-[44px] px-[17px] card pt-[10px]">
         <p className="text-white font-normal text-[14px] font-body">Cloudy conditions from 1AM-9AM, with
                 showers expected at 9AM.</p>
        <div className="mt-[16px] border-t border-white border-opacity-25 pt-[14px] pb-[11px] gap-[20px] flex flex-col justify-between">
+       
            <div className="flex justify-between">
                 {hoursFormat.map((hour, i) => <DayTime time={hour} key={i}/>)}
            </div>
+
           <div className="flex justify-between">
-            {/* <Temp temperature={"21°"}/>
-            <Temp temperature={"21°"}/>
-            <Temp temperature={"19°"}/>
-            <Temp temperature={"19°"}/>
-            <Temp temperature={"19°"}/> */}
             {hourlyTemp && hourlyTemp.map((temp, i) => <Temp temperature={`${temp}°`} key={i}/>)}
           </div>
+
        </div>
     </div>
   )
