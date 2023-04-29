@@ -3,9 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background: linear-gradient(to bottom, #121923, #2B3142);
-}
+
 
 .card{
     @apply border border-white border-opacity-25 rounded-[15px]

@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 ///COMPONENTS
 
 import Home from './Pages/Home'
+import Search from './Pages/Search';
 
 
 
@@ -15,6 +16,7 @@ function App() {
   const [weatherData, setWeatherdata] = useState(null)
   const [weatherForecast, setWeatherForecast] = useState(null)
   const API_KEY = import.meta.env.VITE_API_KEY;
+
 
   useEffect(() => {
     Promise.all([
@@ -37,6 +39,7 @@ function App() {
       <currentWeatherData.Provider value={{weatherData, setWeatherdata, weatherForecast, setWeatherForecast}}>
         <Routes>
           <Route path="/weather" element={<Home />}/>
+          <Route path="/" element={<Search />}/>
         </Routes>
       </currentWeatherData.Provider>
     </BrowserRouter>

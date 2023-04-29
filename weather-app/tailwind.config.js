@@ -22,6 +22,9 @@ export default {
         },
         red:{
           40:'#FF2D55 '
+        },
+        gray:{
+          1000:"#222"
         }
       },
       fontFamily:{
