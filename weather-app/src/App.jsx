@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { currentWeatherEndPoint, weatherForecastEndPoint } from './FetchApi'
 import { currentWeatherData } from './Context'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 //import { getLocation } from './utils/getLocation'
 
 ///COMPONENTS
@@ -32,9 +33,13 @@ function App() {
 
   return (
   <>
-    <currentWeatherData.Provider value={{weatherData, setWeatherdata, weatherForecast, setWeatherForecast}}>
-      <Home />
-    </currentWeatherData.Provider>
+    <BrowserRouter>
+      <currentWeatherData.Provider value={{weatherData, setWeatherdata, weatherForecast, setWeatherForecast}}>
+        <Routes>
+          <Route path="/weather" element={<Home />}/>
+        </Routes>
+      </currentWeatherData.Provider>
+    </BrowserRouter>
   </>
   )
 }
