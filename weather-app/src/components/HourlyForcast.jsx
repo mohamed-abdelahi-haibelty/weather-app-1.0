@@ -5,6 +5,7 @@ import { currentWeatherData } from "../Context"
 import { getTime, getTimeFormat } from "../TimeFormat"
 
 
+
 function HourlyForcast() {
   const hours = getTime(3, 12, 3)
   const hoursFormat = getTimeFormat(hours)
@@ -24,7 +25,7 @@ function HourlyForcast() {
     <div className="hour-forcast mt-[44px] px-[17px] card pt-[10px]">
         <p className="text-white font-normal text-[14px] font-body">Cloudy conditions from 1AM-9AM, with
                 showers expected at 9AM.</p>
-       <div className="mt-[16px] border-t border-white border-opacity-25 pt-[14px] pb-[11px] gap-[20px] flex flex-col justify-between">
+       <div className="mt-[16px] border-t border-white border-opacity-25 pt-[14px] pb-[11px] gap-[50px] flex flex-col justify-between">
        
            <div className="flex justify-between">
                 {hoursFormat.map((hour, i) => <DayTime time={hour} key={i}/>)}
